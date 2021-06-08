@@ -322,7 +322,7 @@ section#portfolio{
 
 .projects-container{
     position: relative;
-    padding: 0 35px;
+    padding: 0 40px;
 }
 
 
@@ -374,19 +374,19 @@ section#portfolio{
 .glider-next{
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     font-size: 2rem;
-    margin-top: -15px;
     z-index: 20;
     color: var(--font-black);
     padding: 5px;
 }
 
 .glider-prev{
-    left: 0px;
+    left: 0;
 }
 
 .glider-next{
-    right: 0px;
+    right: 0;
 }
 
 .dots{
