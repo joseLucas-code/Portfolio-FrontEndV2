@@ -13,9 +13,10 @@ img{
 :root{
     --color-purple:#6252C0;
     --main-bg: #ffffff;
+    --header-bg: #ffffffee;
     --bg-menu: rgba(0,0,0,.1);
     --font-black: #000000;
-    --font-gray: #7f7a85;
+    --font-gray: #515053;
 }
 
 html,
@@ -32,6 +33,7 @@ body{
 body.dark-theme{
     --color-purple:#6252C0;
     --main-bg: #1A1525;
+    --header-bg: #1a1525f8;
     --bg-menu: #38383863;
     --font-black: #ffffff;
     --font-gray: #ffffff;
@@ -52,15 +54,15 @@ body.dark-theme .toogle-theme::before{
 header#main-header{
     width: 100%;
     position: fixed;
-    background: var(--main-bg);
+    background: var(--header-bg);
     bottom: 0;
     left: 0;
-    border-top: 1px solid rgba(0,0,0,.3);
+    box-shadow: 3px 0 5px rgba(0,0,0,.5);
     z-index: 9999;
 }
 
 nav.navigation{
-    padding: 5px 2%;
+    padding: 10px 2%;
 }
 
 .nav-flex{ 
@@ -77,15 +79,27 @@ nav.navigation{
     font-weight: bold;
 }
 
+.logo:hover{
+    color: #6252c0d5;
+}
+
 nav.navigation i{
     font-size: 1.3rem;
-    padding: 5px;
+    padding: 8px;
     cursor: pointer;
     color: var(--font-black)
 }
 
+nav.navigation .nav-flex div > i:hover{
+    color: #6252c0d5;
+}
+
 nav.navigation i + i{
     margin-left: 5px;
+}
+
+nav.navigation a:hover{
+    color: #6252c0d5;
 }
 
 .nav-desktop{
@@ -117,12 +131,16 @@ nav.navigation i + i{
 }
 
 .nav-grid li a:hover{
-    background: var(--bg-menu);
+    background: rgba(0,0,0,.2);
 }
 
 .nav-grid li a i{
     padding: 0;
     margin: 0;
+}
+
+.nav-grid li a:hover i{
+    color: #6252c0d5;
 }
 
 /* HOME PERFIL STYLING */
@@ -135,6 +153,8 @@ section#perfil{
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 1px 1px 0px 100vw rgba(0,0,0,.75) inset;
+    display: flex;
+    align-items: center;
 }
 
 section#perfil .center-content{
@@ -147,6 +167,7 @@ section#perfil .center-content{
         "conteudo conteudo"
     ;
     gap: 15px;
+    align-items: center;
 }
 
 .socials{
@@ -243,6 +264,9 @@ article.front-skills{
     grid-template-columns: 44px 1fr 24px;
     text-align: left;
     margin-bottom: 20px;
+    border: 2px solid #6252c0d5;
+    border-radius: 5px;
+    padding: 15px;
 }
 
 article.front-skills i{
@@ -307,7 +331,10 @@ section#portfolio{
 }
 
 .project-single img{
+    display: block;
     border-radius: 15px;
+    max-height: 500px;
+    border: 2px solid var(--color-purple);
 }
 
 .project-single .section-heading{
@@ -335,6 +362,10 @@ section#portfolio{
     color: white;
 } 
 
+.project-single > div > div a:hover{
+    opacity: .9;
+}
+
 .project-single > div > div a i {
     font-size: 1.2rem;
 }
@@ -345,9 +376,9 @@ section#portfolio{
     top: 50%;
     font-size: 2rem;
     margin-top: -15px;
-    cursor: pointer;
     z-index: 20;
     color: var(--font-black);
+    padding: 5px;
 }
 
 .glider-prev{
@@ -456,8 +487,11 @@ footer span{
 }
 
 @media (min-width: 768px){
+    section#perfil{
+        min-height: 60vh;
+    }
     section#perfil .center-content{
-        padding-top: 70px;
+        padding-top: 20px;
         grid-template-columns: 35px 35% 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
@@ -477,11 +511,10 @@ footer span{
 @media (min-width: 1024px){
     header#main-header{
         width: 100%;
-        height: 50px;
+        height: 64px;
         top: 0;
         left: 0;
-        border-top: none;
-        border-bottom: 1px solid rgba(0,0,0,.2);
+        box-shadow: 0 3px 5px rgba(0,0,0,.5);
         z-index: 9999;
     }
 
@@ -511,6 +544,14 @@ footer span{
     }
     .nav-desktop li a + a{
         margin-left: 5px;
+    }
+
+    section#perfil{
+        min-height: 80vh;
+    }
+
+    section#perfil .center-content{
+        padding-top: 70px;
     }
 
     footer{

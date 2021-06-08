@@ -32,15 +32,7 @@ const skillTab = document.querySelectorAll('article.front-skills')
 
 skillTab.forEach(tab => tab.addEventListener("click", ()=>{
     
-    if(tab.classList.contains('active-tab')){
-        tab.classList.remove('active-tab')
-        
-    }else{
-        skillTab.forEach(single =>{
-            single.classList.remove('active-tab')
-        })
-        tab.classList.add('active-tab')
-    }
+    tab.classList.toggle('active-tab')
 
 }))
 
