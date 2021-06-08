@@ -554,6 +554,15 @@ footer span{
         padding-top: 70px;
     }
 
+    section#knowledge{
+        padding-top: 75px
+    }
+
+    section#portfolio{
+        padding-top: 75px
+    }
+
+
     footer{
         padding: 20px 4%;
     }
