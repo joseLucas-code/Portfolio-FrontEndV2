@@ -19,8 +19,7 @@ img{
     --font-gray: #515053;
 }
 
-html,
-body{
+html{
     scroll-behavior: smooth;
 }
 
