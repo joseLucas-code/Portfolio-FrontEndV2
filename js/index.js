@@ -19,8 +19,8 @@ toggleThemeBtn.addEventListener('click', ()=>{
 })
 
 function setTheme(){
-    if(localStorage.getItem('theme') === 'dark'){
-        document.body.classList.add('dark-theme')
+    if(localStorage.getItem('theme') === 'light'){
+        document.body.classList.remove('dark-theme')
     }    
 }
 
