@@ -13,7 +13,7 @@ toggleMenuBtn.addEventListener('click', ()=>{
 const toggleThemeBtn = document.querySelector('.toogle-theme')
 
 toggleThemeBtn.addEventListener('click', ()=>{
-    localStorage.getItem('theme') === 'dark' ? localStorage.setItem('theme','light') : localStorage.setItem('theme','dark')   
+    localStorage.getItem('theme') === 'dark' ? localStorage.setItem('theme','dark') : localStorage.setItem('theme','light')   
     document.body.classList.toggle('dark-theme')
 
 })
