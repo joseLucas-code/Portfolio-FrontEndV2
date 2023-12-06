@@ -42,7 +42,7 @@ const projectSliderContainer = document.querySelector('.projects-slider')
 
 new Glider(projectSliderContainer,{
     slidesToShow: 1,
-    draggable: false,
+    draggable: true,
     arrows:{
         prev: '.glider-prev',
         next: '.glider-next'
